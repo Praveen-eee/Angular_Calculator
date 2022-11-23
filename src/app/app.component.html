@@ -1,0 +1,49 @@
+<div class="title">
+  <h1 style="color: white">CALCULATOR</h1>
+</div>
+<div
+  style="
+    display: flex;
+    height: 450px;
+    justify-content: center;
+    align-items: center;
+  "
+>
+  <div class="calci">
+    <input
+      #box
+      (keyup.enter)="calcvalue(box.value)"
+      [(ngModel)]="disp"
+      type="text"
+    />
+    <div class="buttons">
+      <div class="buttons-num">
+        <button (click)="writetoinput('7')">7</button>
+        <button (click)="writetoinput('8')">8</button>
+        <button (click)="writetoinput('9')">9</button>
+        <button (click)="writetoinput('4')">4</button>
+        <button (click)="writetoinput('5')">5</button>
+        <button (click)="writetoinput('6')">6</button>
+        <button (click)="writetoinput('1')">1</button>
+        <button (click)="writetoinput('2')">2</button>
+        <button (click)="writetoinput('3')">3</button>
+        <button (click)="writetoinput('0')">0</button>
+        <div class="buttons-extra">
+          <button (click)="writetoinput('.')">.</button>
+          <button (click)="back()">&larr;</button>
+        </div>
+      </div>
+
+      <div class="buttons-sign">
+        <button (click)="writetoinput('+')">+</button>
+        <button (click)="writetoinput('-')">-</button>
+        <button (click)="writetoinput('*')">*</button>
+        <button (click)="writetoinput('/')">/</button>
+      </div>
+    </div>
+    <div class="buttons-clr-equal">
+      <button id="clear" (click)="clear()">C</button>
+      <button id="equals" (click)="equals()">=</button>
+    </div>
+  </div>
+</div>
